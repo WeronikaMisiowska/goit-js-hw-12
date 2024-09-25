@@ -7,8 +7,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const API_KEY = '45947760-a7d8d36d32b01afaf5acf1299'; 
 const form = document.querySelector('.search-form');
-const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector('#gallery');
 const loader = document.querySelector('#loader');
+// const loadMoreBtn = document.querySelector('.load-more')
 const loadMoreBtn = document.createElement('button');
 loadMoreBtn.textContent = 'Load more';
 loadMoreBtn.classList.add('load-more');
@@ -43,7 +44,8 @@ async function fetchImages(query, page) {
 
 function displayImages(images) {
   if (page === 1) {
-    gallery.innerHTML = ''; 
+    gallery.innerHTML = '';
+    gallery.classList.remove('hidden');
   }
   
   const markup = images.map(image => `
