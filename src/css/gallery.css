@@ -135,4 +135,7 @@ form {
     color: #FFFFFF;
     background: #4E75FF;
     border: none;
+    align-self: center;
+    margin-top: 32px;
+    margin-bottom: 44px;
 }
